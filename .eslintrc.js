@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ["@brackio/eslint-config/next.js"],
+  extends: 'next/core-web-vitals',
+  rules: {
+    'react/no-unescaped-entities': 0,
+  },
 };

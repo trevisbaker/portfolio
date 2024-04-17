@@ -11,7 +11,6 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error(error);
   }, [error]);
 
   return (
@@ -20,8 +19,11 @@ export default function Error({
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
-          () => reset()
+          () => {
+            reset();
+          }
         }
+        type="button"
       >
         Try again
       </button>
